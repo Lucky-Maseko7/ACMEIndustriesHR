@@ -1,0 +1,108 @@
+{
+  "Employees": [
+    {
+      "Id": 2,
+      "UserName": "Chris",
+      "Password": "1345",
+      "FullName": "Chris Tucker",
+      "Gender": "Male",
+      "DateOfBirth": "1887-03-23T00:00:00",
+      "CurrentProjects": "QA, UAT, PROD",
+      "ReportingLine": "State",
+      "BusinessRole": "User",
+      "Address": "RSA",
+      "PhotoUrl": "/folder/Tucker.jpg"
+    },
+    {
+      "Id": 3,
+      "UserName": "Hulk",
+      "Password": "1345",
+      "FullName": "Hulk Green",
+      "Gender": "Male",
+      "DateOfBirth": "1887/03/23 00:00:00",
+      "CurrentProjects": "SIT, UAT, PROD",
+      "ReportingLine": "Thor",
+      "BusinessRole": "User",
+      "Address": "ZMB",
+      "PhotoUrl": "/folder/Hulk.jpg"
+    },
+    {
+      "Id": 4,
+      "UserName": "Captain",
+      "Password": "1345",
+      "FullName": "Captain Blue",
+      "Gender": "Male",
+      "DateOfBirth": "1987-03-23",
+      "CurrentProjects": "SIT, UAT, PROD",
+      "ReportingLine": "Iron Man",
+      "BusinessRole": "Manager",
+      "Address": "USA",
+      "PhotoUrl": "/folder/Ant.jpg"
+    },
+    {
+      "Id": 5,
+      "UserName": "Iron Man",
+      "Password": "1345",
+      "FullName": "Iron Man",
+      "Gender": "Male",
+      "DateOfBirth": "1897-03-23 00:00:00",
+      "CurrentProjects": "SIT, UAT, PROD",
+      "ReportingLine": "State",
+      "BusinessRole": "Manager",
+      "Address": "RSA",
+      "PhotoUrl": "/folder/Iron.jpg"
+    },
+    {
+      "Id": 6,
+      "UserName": "Spider Man",
+      "Password": "1345",
+      "FullName": "Spider Man",
+      "Gender": "Male",
+      "DateOfBirth": "1897-03-23T00:00:00",
+      "CurrentProjects": "SIT, UAT, PROD",
+      "ReportingLine": "Iron Man",
+      "BusinessRole": "User",
+      "Address": "RSA",
+      "PhotoUrl": "/folder/Iron.jpg"
+    },
+    {
+      "Id": 7,
+      "UserName": "Falcan",
+      "Password": "1345",
+      "FullName": "Falcan",
+      "Gender": "Male",
+      "DateOfBirth": "1897-03-23T00:00:00",
+      "CurrentProjects": "SIT, UAT, PROD",
+      "ReportingLine": "Captain America",
+      "BusinessRole": "User",
+      "Address": "RSA",
+      "PhotoUrl": "/folder/Iron.jpg"
+    },
+    {
+      "Id": 8,
+      "UserName": "Thabo",
+      "Password": "890",
+      "FullName": "Thabo Mlese",
+      "Gender": "true",
+      "DateOfBirth": "1993-10-25T22:00:00Z",
+      "CurrentProjects": "TAM LTD, Der PTY",
+      "ReportingLine": "John",
+      "BusinessRole": "User",
+      "Address": "231, South, Mile",
+      "PhotoUrl": ""
+    },
+    {
+      "Id": 9,
+      "UserName": "Rulf",
+      "Password": "123",
+      "FullName": "Ralf Mandla",
+      "Gender": "Male",
+      "DateOfBirth": "1992-10-12T22:00:00Z",
+      "CurrentProjects": "Fetch",
+      "ReportingLine": "John",
+      "BusinessRole": "User",
+      "Address": "1069, Matsho",
+      "PhotoUrl": ""
+    }
+  ]
+}

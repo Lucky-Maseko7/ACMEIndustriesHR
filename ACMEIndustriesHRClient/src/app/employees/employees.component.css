@@ -1,0 +1,34 @@
+section {
+    display: table;
+  }
+  
+  .employee-label {
+    display: table-cell;
+    font-size: 14px;
+    margin-left: 8px;
+    min-width: 120px;
+  }
+  
+  .employee-button-row {
+    display: table-cell;
+    width: 490px;
+  }
+  
+  .employee-button-row .mat-button-base {
+    margin: 8px 8px 8px 0;
+  }
+  
+  .employee-flex-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .employee-button-container {
+    display: flex;
+    justify-content: center;
+    width: 120px;
+  }
+  table {
+    width: 100%;
+  }

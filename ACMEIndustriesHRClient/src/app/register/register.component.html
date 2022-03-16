@@ -1,0 +1,59 @@
+<mat-card>
+  <span class="">Register new account</span>
+  <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+
+    <mat-form-field class="new-register-field" >
+      <input matInput placeholder="Username" formControlName="username">
+    </mat-form-field>
+
+    <mat-form-field class="new-register-field" >
+      <input matInput placeholder="FullName" formControlName="FullName">
+    </mat-form-field>
+
+    <mat-form-field class="new-register-field">
+      <mat-select placeholder="Gender" formControlName="gender">
+        <mat-option *ngFor="let type of typeGender" [value]="type.value">
+            {{type.value}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field class="new-register-field" appearance="fill">
+      <mat-label>Choose a date</mat-label>
+      <input matInput [matDatepicker]="picker" formControlName="dateOfBirth">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field class="new-register-field">
+      <input matInput placeholder="Current Projects" formControlName="currentProjects">
+    </mat-form-field>
+
+    <mat-form-field class="new-register-field">
+      <input matInput placeholder="Reporting Line" formControlName="reportingLine">
+    </mat-form-field>
+
+    <mat-form-field class="new-register-field">
+      <input matInput placeholder="Address" formControlName="address">
+    </mat-form-field>
+
+    <mat-form-field class="new-register-field">
+      <input matInput placeholder="Photo Url" formControlName="photoUrl">
+    </mat-form-field>
+
+    <br>
+    <mat-form-field>
+        <input matInput placeholder="Pasword" formControlName="password">
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <input matInput placeholder="Confirm Password" formControlName="confirmPassword">
+    </mat-form-field>
+    <br>
+
+    <span [ngStyle]="{color:'red'}" *ngIf="registerForm.errors?.matchingFields">Passwords do not match!!!</span>
+    <br>
+
+    <button class="new-register-button" mat-raised-button color="primary" [disabled]="!registerForm.valid">Register</button>
+  </form>
+</mat-card>
