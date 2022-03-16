@@ -32,3 +32,21 @@ section {
   table {
     width: 100%;
   }
+
+  #button {
+    margin: 1px 1px 1px 1px;
+
+    padding-top: 0.5px;
+    padding-right: 2px;
+    padding-bottom: 0.5px;
+    padding-left: 2px;
+  }
+
+  #button-delete {
+    margin: 1px 1px 1px 1px;
+
+    padding-top: 0.5px;
+    padding-right: 4px;
+    padding-bottom: 0.5px;
+    padding-left: 4px;
+  }

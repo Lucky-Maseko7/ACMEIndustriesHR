@@ -17,7 +17,6 @@ export class AuthService {
   currentEmployee: any;
   photoUrl = new BehaviorSubject<string>('../../assets/employee.png');
   currentPhotoUrl = this.photoUrl.asObservable();
-  //token: any;
 
   constructor(private http: HttpClient, private router: Router) { this.currentEmployee = localStorage.getItem('Employee'); }
 
@@ -26,11 +25,11 @@ export class AuthService {
   }
 
   login(model: any) {
-    return this.http.post(this.baseUrl + 'login', model).pipe(
+    return this.http.post(this.baseUrl + 'login', model,).pipe(
       map((response: any) => {
         const data = response;
         if (data) {
-          console.log('data ', data);
+          
           localStorage.setItem('Token', data.Token);
           localStorage.setItem('Employee', JSON.stringify(data.Employee));
           this.decodedToken = this.jwtHelper.decodeToken(data.Token);
@@ -52,7 +51,6 @@ export class AuthService {
     if(token !== null){
       return !this.jwtHelper.isTokenExpired(token);
     }
-    
   }
 
   getEmployee(){

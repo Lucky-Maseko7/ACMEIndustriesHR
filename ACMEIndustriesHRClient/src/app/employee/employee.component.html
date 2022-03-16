@@ -1,0 +1,24 @@
+<mat-card class="employee-card">
+
+  <mat-card-title-group>
+    <mat-card-title>{{employee.UserName}}</mat-card-title>
+    <mat-card-subtitle>FullName : {{employee.FullName}}</mat-card-subtitle>
+    <mat-card-subtitle>Gender : {{employee.Gender}}</mat-card-subtitle>
+    <mat-card-subtitle>Date Of Birth : {{employee.DateOfBirth}}</mat-card-subtitle>
+    <mat-card-subtitle>Current Projects : {{employee.CurrentProjects}}</mat-card-subtitle>
+    <mat-card-subtitle>Reporting Line : {{employee.ReportingLine}}</mat-card-subtitle>
+    <mat-card-subtitle>Business Role : {{employee.BusinessRole}}</mat-card-subtitle>
+    <mat-card-subtitle>Address : {{employee.Address}}</mat-card-subtitle>
+
+    <img class="rounded float-end" mat-card-xl-image src="{{employee.PhotoUrl || '../../../assets/user.png'}}" 
+    alt="{{employee?.UserName}}">
+
+  </mat-card-title-group>
+
+
+  <mat-card-actions id="button-container">
+    <button *ngIf="isManager" id="button" mat-raised-button color="primary" (click)="editProfile()">Edit Profile</button>
+    <button id="button" mat-raised-button (click)="cancel()">Back</button>
+  </mat-card-actions>
+  
+</mat-card>

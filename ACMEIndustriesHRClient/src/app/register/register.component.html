@@ -1,5 +1,7 @@
 <mat-card>
-  <span class="">Register new account</span>
+
+  <mat-card-title id="center">Register new account</mat-card-title>
+  
   <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
 
     <mat-form-field class="new-register-field" >
@@ -50,8 +52,9 @@
       <input matInput placeholder="Confirm Password" formControlName="confirmPassword">
     </mat-form-field>
     <br>
-
-    <span [ngStyle]="{color:'red'}" *ngIf="registerForm.errors?.matchingFields">Passwords do not match!!!</span>
+    <p id="center">
+      <span  [ngStyle]="{color:'red'}" *ngIf="registerForm.errors?.matchingFields">Passwords do not match!!!</span>
+    </p>
     <br>
 
     <button class="new-register-button" mat-raised-button color="primary" [disabled]="!registerForm.valid">Register</button>

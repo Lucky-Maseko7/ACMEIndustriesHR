@@ -1,7 +1,7 @@
 <div class="container mt-5">
   <div *ngIf="!registerMode " style="text-align: center">
-    <h1>Find your match</h1>
-    <p class="lead">Come on in to view your matches... All you need to do is sign up!</p>
+    <h1>Welcome to ACME Industries’ HR division</h1>
+    <p class="lead">Paperless employee information and daily tasks process!!</p>
     <div class="text-center">
       <button *ngIf="!authService.loggedIn()" mat-raised-button color="primary" [routerLink]="['/register']">Register</button>
       <button *ngIf="authService.loggedIn()" mat-raised-button color="primary" [routerLink]="['/addEmployee']">Add Employee</button>

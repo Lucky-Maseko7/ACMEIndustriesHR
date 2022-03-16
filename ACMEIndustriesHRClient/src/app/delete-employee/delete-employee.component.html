@@ -4,13 +4,13 @@
     <mat-card-title>Are you sure you want to delete {{employee.username}}?</mat-card-title>
   </mat-card-header>
 
+  <mat-divider></mat-divider>
+
   <mat-card-content>
     <mat-list>
       <mat-list-item>
         <b>FullName: </b> {{employee.fullName}}
       </mat-list-item>
-      <mat-divider></mat-divider>
-
 
       <mat-list-item [ngStyle]="employeeService.isManager(employee.businessRole) ? {color:'red'} : {color:'green'}">
         <b>Business Role: </b> {{(employee.businessRole)}}
@@ -19,19 +19,17 @@
       <mat-list-item>
         <b>Reporting Line: </b> {{employee.reportingLine}}
       </mat-list-item>
-      <mat-divider></mat-divider>
 
       <mat-list-item>
         <b>Current Projects: </b> {{employee.currentProjects}}
       </mat-list-item>
-      <mat-divider></mat-divider>
 
     </mat-list>
   </mat-card-content>
 
-  <mat-card-actions>
-    <button mat-raised-button (click)="cancel()">Cancel</button>
-    <button mat-raised-button color="warn" (click)="confirm()">Confirm</button>
+  <mat-card-actions id="button-container">
+    <button id="button" mat-raised-button (click)="cancel()">Cancel</button>
+    <button id="button" mat-raised-button color="warn" (click)="confirm()">Confirm</button>
   </mat-card-actions>
 
 </mat-card>

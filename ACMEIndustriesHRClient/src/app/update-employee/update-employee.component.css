@@ -1,8 +1,8 @@
 mat-card{
-    /* width:80%; */
+    width:50%; 
     margin-top: 5%;
-    margin-left: 40%;
-    margin-right: 40%;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 5%;
 }
 
@@ -12,6 +12,22 @@ mat-card{
     margin-right: 10%;
 }
 
-.new-form-btn{
-    position: relative;
+
+#center-align-text {
+    padding-right: 33;
+}
+
+#button-container {
+    width:80%; 
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5%;
+}
+    
+#button{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1%;
 }

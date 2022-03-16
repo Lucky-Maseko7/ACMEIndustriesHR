@@ -1,16 +1,18 @@
 <mat-toolbar color="primary">
+  
   <button mat-button [routerLink]="['/home']">
     <mat-icon aria-hidden="false" aria-label="Example home icon">home</mat-icon>
   </button>
   <button mat-button *ngIf="loggedIn()" [routerLink]="['/employees']">
-    View All <mat-icon>list</mat-icon>
+    View All <mat-icon>visibility</mat-icon>
   </button>
-  <button mat-button *ngIf="loggedIn()" [routerLink]="['/addEmployee']">
-    <mat-icon>person_add</mat-icon> Add Employee
+  <button mat-button *ngIf="isManager" [routerLink]="['/addEmployee']">
+    <mat-icon>person_add</mat-icon>
   </button>
 
   <span style="flex: 1 1 auto"></span>
-  <button mat-button *ngIf="loggedIn()" [routerLink]="['/']">
+  
+  <button mat-button *ngIf="loggedIn()" [routerLink]="['/profile']">
     Welcome {{model.UserName}} <mat-icon>face</mat-icon>
   </button>
   <button mat-button *ngIf="loggedIn()" (click)="logout()">

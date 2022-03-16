@@ -31,6 +31,11 @@ import { AlertifyService } from './Services/Alertify.service';
 import { AuthService } from './Services/Auth.service';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
+import { UpdateEmployeeComponent } from './update-employee/update-employee.component';
+import { DeleteEmployeeComponent } from './delete-employee/delete-employee.component';
+import { RegisterComponent } from './register/register.component';
+import { EmployeeComponent } from './employee/employee.component';
+import { ProfileComponent } from './profile/profile.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { EmployeesComponent } from './employees/employees.component';
@@ -38,9 +43,6 @@ import { AddEmployeeComponent } from './add-employee/add-employee.component';
 
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
-import { UpdateEmployeeComponent } from './update-employee/update-employee.component';
-import { DeleteEmployeeComponent } from './delete-employee/delete-employee.component';
-import { RegisterComponent } from './register/register.component';
 
 //MatNativeDateModule, MatMomentDateModul
 
@@ -49,7 +51,7 @@ export function tokenGetter() {
 }
 
 @NgModule({
-  declarations: [												
+  declarations: [														
     AppComponent,
       HomeComponent,
       HeaderComponent,
@@ -59,7 +61,9 @@ export function tokenGetter() {
       AddEmployeeComponent,
       UpdateEmployeeComponent,
       DeleteEmployeeComponent,
-      RegisterComponent
+      RegisterComponent,
+      EmployeeComponent,
+      ProfileComponent
    ],
   imports: [
     BrowserModule,

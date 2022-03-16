@@ -1,6 +1,7 @@
 <mat-card>
   
-  <span>Add New Employee</span>
+  <mat-card-title id="center">Register New Employee</mat-card-title>
+  
   <form [formGroup]="employeeForm" (ngSubmit)="onSubmit()">
     
     <mat-form-field class="new-add-field" >
@@ -53,8 +54,6 @@
     <mat-form-field class="new-add-field">
       <input matInput placeholder="Photo Url" formControlName="photoUrl">
     </mat-form-field>
-
-    
 
     <button mat-raised-button color="primary" [disabled]="!employeeForm.valid">Create new</button>
 

@@ -9,8 +9,11 @@ import { AuthService } from '../Services/Auth.service';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+
   model: any = {};
   photoUrl: string | undefined;
+  
+  isManager: any;
 
   constructor(private  authService: AuthService, private alertify: AlertifyService, private router: Router) {
     
@@ -18,7 +21,9 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit() {
 
+    this.isManager = this.authService.isManagerFunction();
     this.model = this.authService.getEmployee();
+    
   }
 
   loggedIn() {

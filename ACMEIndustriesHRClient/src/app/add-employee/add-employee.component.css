@@ -1,15 +1,15 @@
-.new-add-form{
-    /* width:80%; */
+mat-card{
+    width:50%; 
     margin-top: 5%;
-    margin-left: 20%;
-    margin-right: 20%;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 5%;
 }
 
-.new-add-field {
-    width:60%;
-    margin-left: 20%;
-    margin-right: 20%;
+.mat-form-field {
+    width:80%;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 .new-form-btn{
@@ -19,3 +19,18 @@
 .file-input {
     display: none;
   }
+
+  #center {
+
+    text-align: center;
+    
+    }
+
+    button{
+        /*Change the width as much as you like, but make sure 
+        margin-left and margin-right + width = 100%*/
+        width:80%;
+        margin-top: 5%;
+        margin-left: 10%;
+        margin-right: 10%;
+    }

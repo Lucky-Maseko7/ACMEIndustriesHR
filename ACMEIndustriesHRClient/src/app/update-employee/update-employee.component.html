@@ -1,63 +1,68 @@
-<h2 mat-dialog-title>Update employee</h2>
 
-<div mat-dialog-container [formGroup]="form">
+<mat-card-title id="center-align-text">Update Details</mat-card-title>
 
-  <mat-form-field class="update-employee-field" >
-    <input matInput placeholder="Username" formControlName="username">
-  </mat-form-field>
+<mat-dialog-content class="mat-typography">
 
-  <mat-form-field class="update-employee-field" >
-    <input matInput placeholder="Password" formControlName="password">
-  </mat-form-field>
+  <form mat-dialog-container [formGroup]="form">
 
-  <mat-form-field class="update-employee-field" >
-    <input matInput placeholder="FullName" formControlName="FullName">
-  </mat-form-field>
-
-  <mat-form-field class="update-employee-field">
-    <mat-select placeholder="Gender" formControlName="gender">
-      <mat-option *ngFor="let type of typeGender" [value]="type.value">
-          {{type.value}}
-      </mat-option>
-    </mat-select>
-  </mat-form-field>
-
-  <mat-form-field class="update-employee-field" appearance="fill">
-    <mat-label>Choose a date</mat-label>
-    <input matInput [matDatepicker]="picker" formControlName="dateOfBirth">
-    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-    <mat-datepicker #picker></mat-datepicker>
-  </mat-form-field>
-
-  <mat-form-field class="update-employee-field">
-    <input matInput placeholder="Current Projects" formControlName="currentProjects">
-  </mat-form-field>
-
-  <mat-form-field class="update-employee-field">
-    <input matInput placeholder="Reporting Line" formControlName="reportingLine">
-  </mat-form-field>
-
-  <mat-form-field class="update-employee-field">
-    <mat-select placeholder="Business Role" formControlName="businessRole">
-      <mat-option *ngFor="let type of typeBusinessRole" [value]="type.value">
-          {{type.value}}
-      </mat-option>
-    </mat-select>
-  </mat-form-field>
-
-  <mat-form-field class="update-employee-field">
-    <input matInput placeholder="Address" formControlName="address">
-  </mat-form-field>
-
-  <mat-form-field class="update-employee-field">
-    <input matInput placeholder="Photo Url" formControlName="photoUrl">
-  </mat-form-field>
-</div>
-
-
-<mat-dialog-actions >
-  <button class="mat-raised-button" (click)="close()">Close</button>
+    <mat-form-field class="update-employee-field" >
+      <input matInput placeholder="Username" formControlName="username">
+    </mat-form-field>
   
-  <button class="mat-raised-button mat-primary" (click)="save()">Save</button>
+    <mat-form-field class="update-employee-field" >
+      <input matInput placeholder="Password" formControlName="password">
+    </mat-form-field>
+  
+    <mat-form-field class="update-employee-field" >
+      <input matInput placeholder="FullName" formControlName="FullName">
+    </mat-form-field>
+  
+    <mat-form-field class="update-employee-field">
+      <mat-select placeholder="Gender" formControlName="gender">
+        <mat-option *ngFor="let type of typeGender" [value]="type.value">
+            {{type.value}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  
+    <mat-form-field class="update-employee-field" appearance="fill">
+      <mat-label>Choose a date</mat-label>
+      <input matInput [matDatepicker]="picker" formControlName="dateOfBirth">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+  
+    <mat-form-field class="update-employee-field">
+      <input matInput placeholder="Current Projects" formControlName="currentProjects">
+    </mat-form-field>
+  
+    <mat-form-field class="update-employee-field">
+      <input matInput placeholder="Reporting Line" formControlName="reportingLine">
+    </mat-form-field>
+  
+    <mat-form-field class="update-employee-field">
+      <mat-select placeholder="Business Role" formControlName="businessRole">
+        <mat-option *ngFor="let type of typeBusinessRole" [value]="type.value">
+            {{type.value}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  
+    <mat-form-field class="update-employee-field">
+      <input matInput placeholder="Address" formControlName="address">
+    </mat-form-field>
+  
+    <mat-form-field class="update-employee-field">
+      <input matInput placeholder="Photo Url" formControlName="photoUrl">
+    </mat-form-field>
+  </form>
+  
+  
+  <mat-dialog-actions id="button-container">
+    <button id="button" class="mat-raised-button" (click)="close()">Close</button>
+    
+    <button id="button" class="mat-raised-button mat-primary" (click)="save()">Save</button>
+  
+  </mat-dialog-actions>
 
-</mat-dialog-actions>
+</mat-dialog-content>

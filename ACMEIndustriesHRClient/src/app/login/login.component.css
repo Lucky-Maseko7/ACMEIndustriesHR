@@ -1,3 +1,29 @@
 mat-card{
-    margin: 5% 40% 5% 40%;
+    width:50%; 
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5%;
 }
+
+.mat-form-field {
+    width:80%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+
+#center {
+
+    text-align: center;
+    
+    }
+
+button{
+    /*Change the width as much as you like, but make sure 
+    margin-left and margin-right + width = 100%*/
+    width:80%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+

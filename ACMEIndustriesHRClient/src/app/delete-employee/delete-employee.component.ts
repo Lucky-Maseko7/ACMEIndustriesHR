@@ -35,7 +35,6 @@ export class DeleteEmployeeComponent implements OnInit {
       this.employee.currentProjects = data.CurrentProjects;
       this.employee.reportingLine = data.ReportingLine;
       this.employee.businessRole = data.BusinessRole;
-
     });
   }
 

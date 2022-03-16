@@ -1,17 +1,5 @@
-.new-entry-form{
-    /* width:80%; */
-    margin-top: 5%;
-    margin-left: 20%;
-    margin-right: 20%;
-    margin-bottom: 5%;
-}
-
-.new-entry-field {
-    width:60%;
-    margin-left: 20%;
-    margin-right: 20%;
-}
-
-.new-form-btn{
-    position: relative;
+html, body {
+    height: 100%;
+    box-sizing: border-box;
+    margin: 0;
 }
