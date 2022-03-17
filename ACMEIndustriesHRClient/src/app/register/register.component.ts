@@ -22,6 +22,8 @@ export class RegisterComponent implements OnInit {
     {value: 'Manager'},
   ];
 
+  imageSrc: string = '';
+
   registerForm: FormGroup;
 
   constructor(private router:Router, private authService:AuthService, private fb: FormBuilder) { 
@@ -45,6 +47,26 @@ export class RegisterComponent implements OnInit {
 
   ngOnInit() {
 
+  }
+
+  onFileChange(event:any){
+    const reader = new FileReader();
+     
+    if(event.target.files && event.target.files.length) {
+      const [file] = event.target.files;
+      reader.readAsDataURL(file);
+     
+      reader.onload = () => {
+    
+        this.imageSrc = reader.result as string;
+      
+        this.registerForm.patchValue({
+          fileSource: reader.result
+        });
+    
+      };
+    
+    }
   }
 
 

@@ -69,9 +69,12 @@ export class AuthService {
 
   isManagerFunction() {
 
-    let currentEmployee = this.getEmployee();
+    if(this.getEmployee() !== undefined && this.getEmployee !== null){
 
-    if(currentEmployee.BusinessRole === 'Manager') return true;
+      let currentEmployee = this.getEmployee();
+
+      if(currentEmployee.BusinessRole === 'Manager') return true;
+    }
   }
 
 }

@@ -57,7 +57,7 @@ namespace ACMEIndustriesHR.API.Controllers
 
                 _repo.RegisterEmployee(employee);
 
-                return Ok("Entry was created");
+                return Ok("Employee was created");
             }
             catch (Exception ex)
             {
@@ -75,7 +75,7 @@ namespace ACMEIndustriesHR.API.Controllers
             try
             {
                 _repo.UpdateEmployee(id, employee);
-                return Ok("Entry updated!");
+                return Ok("Employee updated!");
             }
             catch (Exception exception)
             {
@@ -93,7 +93,7 @@ namespace ACMEIndustriesHR.API.Controllers
                 if (id < 0) return BadRequest();
 
                 _repo.DeleteEmployee(id);
-                return Ok("Entry deleted");
+                return Ok("Employee deleted");
             }
             catch (Exception exception)
             {

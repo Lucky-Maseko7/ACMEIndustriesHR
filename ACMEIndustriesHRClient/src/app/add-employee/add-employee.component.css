@@ -30,7 +30,26 @@ mat-card{
         /*Change the width as much as you like, but make sure 
         margin-left and margin-right + width = 100%*/
         width:80%;
-        margin-top: 5%;
         margin-left: 10%;
         margin-right: 10%;
+
     }
+
+    #file{
+        /*Change the width as much as you like, but make sure 
+        margin-left and margin-right + width = 100%*/
+        width: 90%;
+        margin-top: 1%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 5%;
+
+    }
+
+    label {
+        margin-left: 5%;
+        margin-right: 10%;
+    }
+
+
+    

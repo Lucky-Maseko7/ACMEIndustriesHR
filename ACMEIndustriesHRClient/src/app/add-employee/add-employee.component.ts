@@ -22,6 +22,8 @@ export class AddEmployeeComponent implements OnInit {
     {value: 'User'},
     {value: 'Manager'},
   ];
+  
+  imageSrc: string = '';
 
   constructor(private router:Router, private employeeService:EmployeeService) {
     
@@ -38,14 +40,36 @@ export class AddEmployeeComponent implements OnInit {
     businessRole: new FormControl('', [Validators.required]),
     address: new FormControl('', [Validators.required]),
     photoUrl: new FormControl(''),
+    file: new FormControl('',),
+    fileSource: new FormControl('', )
   });
 
   ngOnInit() {
     
   }
 
+  onFileChange(event:any){
+    const reader = new FileReader();
+     
+    if(event.target.files && event.target.files.length) {
+      const [file] = event.target.files;
+      reader.readAsDataURL(file);
+     
+      reader.onload = () => {
+    
+        this.imageSrc = reader.result as string;
+      
+        this.employeeForm.patchValue({
+          fileSource: reader.result
+        });
+    
+      };
+    
+    }
+  }
 
-  onSubmit() {
+
+  onSubmit(event:any) {
     console.log(this.employeeForm.value);
 
     this.employeeService.createEmployee(this.employeeForm.value).subscribe((data) => {

@@ -11,12 +11,13 @@ import { EmployeeService } from '../Services/Employee.service';
 export class HomeComponent implements OnInit {
 
   registerMode = false;
+  isManager: any;
 
   constructor(private service: EmployeeService, 
     public authService: AuthService) { }
 
   ngOnInit() {
-     //this.getValues();
+     this.isManager = this.authService.isManagerFunction();
      this.authService.loggedIn();
   }
 

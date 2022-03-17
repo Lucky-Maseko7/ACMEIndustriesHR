@@ -11,5 +11,8 @@ namespace ACMEIndustriesHR.API.Helper
         string ReadFile(string filePath);
         void WriteToFile(string filePath, string newContent);
 
+        void DirectoryValidation();
+        void FileValidation();
+
     }
 }

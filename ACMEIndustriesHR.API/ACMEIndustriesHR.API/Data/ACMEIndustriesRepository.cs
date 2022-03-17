@@ -56,7 +56,7 @@ namespace ACMEIndustriesHR.API.Data
             {
                 if (id > 0)
                 {
-                    var employeeToDelete = _dataContext.Employees.FirstOrDefault(emp => emp["Id"].Value<int>() == id);//GetEmployeeById(id);
+                    var employeeToDelete = _dataContext.Employees.FirstOrDefault(emp => emp["Id"].Value<int>() == id);
 
                     _dataContext.Employees.Remove(employeeToDelete);
 

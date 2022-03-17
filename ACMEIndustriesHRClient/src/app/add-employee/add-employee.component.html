@@ -2,7 +2,7 @@
   
   <mat-card-title id="center">Register New Employee</mat-card-title>
   
-  <form [formGroup]="employeeForm" (ngSubmit)="onSubmit()">
+  <form [formGroup]="employeeForm" (ngSubmit)="onFileChange($event)">
     
     <mat-form-field class="new-add-field" >
       <input matInput placeholder="Username" formControlName="username">
@@ -51,11 +51,17 @@
       <input matInput placeholder="Address" formControlName="address">
     </mat-form-field>
 
-    <mat-form-field class="new-add-field">
-      <input matInput placeholder="Photo Url" formControlName="photoUrl">
-    </mat-form-field>
+    <div id="file" class="form-group">
+      <label  for="file">Picture Upload:</label>
+      <input
+          formControlName="file"
+          id="file"
+          type="file"
+          class="form-control">
+    </div>
 
     <button mat-raised-button color="primary" [disabled]="!employeeForm.valid">Create new</button>
+
 
   </form>
 </mat-card>

@@ -16,7 +16,7 @@ namespace ACMEIndustriesHR.API.Data
 
         public DataContext()
         {
-            _fileString = _fileManager.ReadFile(AppSettingManager.FileDirectory);
+            _fileString = _fileManager.ReadFile(AppSettingManager.FileDirectory + AppSettingManager.FileName);
             jObject = JObject.Parse(_fileString);
 
             OnModelCreating();
@@ -42,7 +42,7 @@ namespace ACMEIndustriesHR.API.Data
         {
             string result = JsonConvert.SerializeObject(jObject, Formatting.Indented);
 
-            _fileManager.WriteToFile(AppSettingManager.FileDirectory, result);
+            _fileManager.WriteToFile(AppSettingManager.FileDirectory + AppSettingManager.FileName, result);
         }
 
     }

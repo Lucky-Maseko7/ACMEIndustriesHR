@@ -10,6 +10,11 @@ namespace ACMEIndustriesHR.API.Helper
             get { return ConfigurationManager.AppSettings["FileDirectory"]; }
         }
 
+        public static string FileName
+        {
+            get { return ConfigurationManager.AppSettings["FileName"]; }
+        }
+
         public static string ApiSecret
         {
             //const string secretKey = "your secret key goes here";
