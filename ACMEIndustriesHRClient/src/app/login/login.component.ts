@@ -29,7 +29,7 @@ export class LoginComponent {
       // this.alertify.success('Logged in successfully');
     }, (error: any) => {
       this.alertify.error(error);
-      console.log("Error: " + JSON.stringify(error));
+      
     }, 
     () => {
       // this.authService.loggedIn();

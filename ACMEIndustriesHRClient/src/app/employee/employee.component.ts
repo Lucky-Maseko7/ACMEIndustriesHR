@@ -44,8 +44,6 @@ export class EmployeeComponent implements OnInit {
 
     this.id = this.route.snapshot.paramMap.get('id');
     this.employeeService.getEmployeeById(this.id).subscribe((data: any) => {
-      
-    console.log('Employee', data);
 
       this.employee.UserName = data.UserName;
       this.employee.FullName = data.FullName;
@@ -68,7 +66,6 @@ export class EmployeeComponent implements OnInit {
 
 
   editProfile(){
-    console.log('Edit clicked!');
 
     this.dialog.open(UpdateEmployeeComponent, {
       data: { employee : this.employee }

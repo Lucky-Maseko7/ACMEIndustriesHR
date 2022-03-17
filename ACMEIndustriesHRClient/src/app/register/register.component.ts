@@ -71,14 +71,13 @@ export class RegisterComponent implements OnInit {
 
 
   onSubmit() {
-    console.log('Form data' + JSON.stringify(this.registerForm.value));
+    
 
     delete this.registerForm.value.confirmPassword;
 
     this.registerForm.value.businessRole = 'User';
 
     this.authService.register(this.registerForm.value).subscribe((data : any) => {
-      console.log('Responce ' + JSON.stringify(data));
 
       localStorage.setItem('userName', data.UserName);
       localStorage.setItem('token_value', data.Token);

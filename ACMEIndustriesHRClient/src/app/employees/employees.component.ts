@@ -57,7 +57,6 @@ export class EmployeesComponent implements OnInit {
     if(birthdate)
     {
         var timeDiff = Math.abs(Date.now() - birthdate);
-        console.log(Math.floor((timeDiff / (1000 * 3600 * 24))/365));
         //Used Math.floor instead of Math.ceil
         //so 26 years and 140 days would be considered as 26, not 27.
          return Math.floor((timeDiff / (1000 * 3600 * 24))/365);
@@ -71,7 +70,6 @@ export class EmployeesComponent implements OnInit {
   }
 
   updateEntry(employee: any) {
-    console.log(employee);
 
     this.dialog.open(UpdateEmployeeComponent, {
       data: { employee }

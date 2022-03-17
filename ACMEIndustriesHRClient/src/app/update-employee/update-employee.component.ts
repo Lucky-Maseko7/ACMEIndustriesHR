@@ -30,7 +30,7 @@ export class UpdateEmployeeComponent {
               @Inject(MAT_DIALOG_DATA) public data: {employee: any},
               private service: EmployeeService, private authService: AuthService, private router: Router) 
   { 
-    console.log('DATA: ' + JSON.stringify(data));
+    
     let employeeToUpdate = data.employee;
     this.id = employeeToUpdate.Id;
 
@@ -53,11 +53,8 @@ export class UpdateEmployeeComponent {
     this.form.value.id = this.id;
     let currentUser = this.authService.getEmployee();
 
-
-    console.log('Data: ' + JSON.stringify(this.form.value))
-
     this.service.updateEmployee(this.id, this.form.value).subscribe((response) => {
-      console.log('Response: ' + response)
+      
       if( this.id === currentUser.Id && response === 'Employee updated!'){
         
         localStorage.removeItem('Employee');
@@ -69,7 +66,7 @@ export class UpdateEmployeeComponent {
   }
 
   close() {
-    console.log('Close Clicked')
+
     this.dialogRef.close();
   }
 

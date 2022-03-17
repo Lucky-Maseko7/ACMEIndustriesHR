@@ -29,7 +29,6 @@ export class DeleteEmployeeComponent implements OnInit {
     this.id = this.route.snapshot.paramMap.get('id');
 
     this.employeeService.getEmployeeById(this.id).subscribe((data: any) => {
-      console.log(data);
       this.employee.username = data.UserName;
       this.employee.fullName = data.FullName;
       this.employee.currentProjects = data.CurrentProjects;
@@ -39,14 +38,12 @@ export class DeleteEmployeeComponent implements OnInit {
   }
 
   cancel() {
-    console.log('Cancel clicked!');
     this.router.navigate(['/employees']);
   }
 
   confirm() {
-    console.log('Confirm clicked!');
     this.employeeService.deleteEmployee(this.id).subscribe((data)=>{
-      console.log(data);
+      
       if(data == 'Entry deleted')
       {
         this.router.navigate(['/employees']);

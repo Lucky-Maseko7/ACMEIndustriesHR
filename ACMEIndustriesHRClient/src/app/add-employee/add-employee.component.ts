@@ -70,10 +70,8 @@ export class AddEmployeeComponent implements OnInit {
 
 
   onSubmit(event:any) {
-    console.log(this.employeeForm.value);
 
     this.employeeService.createEmployee(this.employeeForm.value).subscribe((data) => {
-      console.log('Data - ', data);
       if(data == 'Entry was created') {
         this.router.navigate(['/employees']);
       }

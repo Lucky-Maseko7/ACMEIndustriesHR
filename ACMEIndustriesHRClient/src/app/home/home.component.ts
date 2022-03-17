@@ -23,7 +23,6 @@ export class HomeComponent implements OnInit {
 
   getValues(){
     this.service.getAll().subscribe((data) => {
-      console.log('Result - ', data);
       
     });
   }
