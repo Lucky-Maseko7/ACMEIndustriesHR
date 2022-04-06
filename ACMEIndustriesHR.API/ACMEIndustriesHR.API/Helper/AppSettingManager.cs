@@ -20,5 +20,29 @@ namespace ACMEIndustriesHR.API.Helper
             //const string secretKey = "your secret key goes here";
             get { return ConfigurationManager.AppSettings["ApiSecret"]; }
         }
+
+        public static string CloudName
+        {
+            //const string secretKey = "your secret key goes here";
+            get { return ConfigurationManager.AppSettings["CloudName"]; }
+        }
+
+        public static string CloudAPIKey
+        {
+            //const string secretKey = "your secret key goes here";
+            get { return ConfigurationManager.AppSettings["CloudAPIKey"]; }
+        }
+
+        public static string CloudAPISecret
+        {
+            //const string secretKey = "your secret key goes here";
+            get { return ConfigurationManager.AppSettings["CloudAPISecret"]; }
+        }
+
+        public static string CloudAPIEnvironmentVariable
+        {
+            //const string secretKey = "your secret key goes here";
+            get { return ConfigurationManager.AppSettings["CloudAPIEnvironmentVariable"]; }
+        }
     }
 }
